@@ -1,0 +1,31 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var str="Welcome to Microsoft!"; 
+		str= str + "We are proud to announce that Microsoft has ";
+		str=str + "one of the largest Web Developers sites in the world.";
+		var text="javescriptsss";
+		var name="Doe, John";
+		var text1='"a","b"';
+		var text2='aaa bbb ccc ddd';
+		var uw=text2.replace(/\b\w+\b/g,function(word){
+			//把字符串中所有单词的首字母都转换为大写：
+			return word.substring(0,1).toUpperCase()+word.substring(1);
+		});
+
+		 
+		document.write(str.replace(/Microsoft/g,"school")+'<br />');
+		document.write(text.replace(/javescriptsss/,"JavaScriptsss")+'<br />');
+		document.write(name.replace(/(\w+)\s*, \s*(\w+)/, "$2 $1")+'<br />');//调换位置
+		document.write(text1.replace(/"([^"]*)"/g,"'$1'")+'<br />');//$1 text1中的第1子表达式相匹配的文本。
+		//alert(uw)
+		document.write(uw)
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

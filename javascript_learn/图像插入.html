@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+<!-- 下面的例子把图像根据周围的文本进行右对齐： -->
+<!-- 
+align 属性可以是以下值：
+
+值		描述
+left	图像左对齐
+right	图像右对齐
+middle	图像居中对齐
+top		图像顶部对齐
+bottom	图像底部对齐
+ -->
+<!-- 排列图片 -->
+<script>
+function alignImg(){document.getElementById("compman").align="right";}
+</script>
+</head>
+
+
+
+<body background="39.jpg"> <!-- 背景图片 -->
+<p><img src="aa.png" width="128" height="128"/></p>   <!-- 浮动图片 -->
+
+<p>请注意，插入动画图像的语法与插入普通图像的语法没有区别。</p>
+
+<P>来自另一个文件夹的图片<img src="/C:\Users\SITI\Desktop\学习文档\javascript\资料/ss.png"/></p>
+
+<p>来自网页的图片<img src="http://www.w3school.com.cn/i/w3school_logo_white.gif"></p>
+
+<!-- 下面的例子把图像根据周围的文本进行右对齐： -->
+<img id="compman" src="aa.png" alt="Computerman">
+<p>Some text. Some text. Some text. Some text.</p>
+<input type="button" onclick="alignImg()" value="Align Image">
+
+
+<!-- 浮动图片 -->
+<p>浮动图片</p>
+<p><img src ="aa.png" align ="left"> 
+带有图像的一个段落。图像的 align 属性设置为 "left"。图像将浮动到文本的左侧。
+</p>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<!-- 调整图像尺寸，其中width,height均可调整图像尺寸 -->
+<p>改变图片大小</p>
+<img src="39.jpg" width="200" height="200">
+
+
+<!-- 为图片显示替换文本 -->
+<p>为图片显示替换文本</p>
+<img src="aa.png" alt="向左转" />
+
+
+<!-- 制作图象链接 -->
+<p>制作图象链接</p>
+<a href="http://www.w3school.com.cn/example/html/lastpage.html">
+<img border="" ="0" src="cc.png"/>  <!--border：css的 样式 -->
+</a>
+
+
+
+</body>
+

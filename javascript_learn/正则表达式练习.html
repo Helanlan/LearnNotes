@@ -1,0 +1,69 @@
+<html>
+
+<head>
+</head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<script type="text/javascript">
+
+	var objExp=/\d/g;
+	var flag=objExp.test(123456);
+	alert(flag)
+	//返回true
+
+	var flags=objExp.test("123456dvfsfa");
+	alert(flags)
+	//返回true
+
+	var flagss=objExp.test("sddjf");
+	alert(flagss)
+	//返回false
+
+
+
+	//电话还好吗检测
+		function checktel(){
+			var str=form1.tel.value;//获取输入的电话号码
+			var num=/^(\d{3,4}-)?\d{7,8}$/ 
+			//^ $电话号码前后检测，{3,4}{7,8}数字的数量大于前面的数字，小于后面的数字，?表示匹配0个或1个，\d表示数字检测
+			if(num.test(str)==true){
+				alert("输入正确")
+			}else{
+				alert("输入不正确")
+			}
+		}
+
+
+		//获取身份证号
+		function idcardget(){
+			var str1=form2.card.value;
+			var carddata=/(^\d{6})(\d{4})(\d{2})(\d{2})(\d{3,4}$)/;
+			var arr=carddata.exec(str1);
+			if(arr!=null){
+				alert("生日为："+arr[2]+"年"+arr[3]+"月"+arr[4]+"日")
+			}else{
+				alert("身份证号码不正确")
+			}
+		}
+
+
+
+
+
+	</script>
+<body>
+<!-- //电话还好吗检测 -->
+	<form name="form1" method="post" action="">
+		enter the telephong:
+		<input type="text" name="tel" id ="tel"></input>
+		<input type="button" name="check" value="检测" onclick="checktel()"></input>
+	</form>
+
+<!-- 获取身份证号 -->
+<form name="form2" method="post" action="">
+		输入身份证号码：
+		<input type="text" name="card" id ="card" size="40"></input>
+		<input type="button" value="获取出生日期" onclick="idcardget()"></input>
+	</form>
+
+</body>
+</html>
